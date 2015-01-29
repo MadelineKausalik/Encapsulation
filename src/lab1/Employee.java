@@ -12,21 +12,21 @@ import java.util.Date;
  * @version     1.01
  */
 public class Employee {
-    String firstName;
-    String lastName;
-    public String ssn;
-    public Date birthDate;
-    boolean metWithHr;
-    boolean metDeptStaff;
-    boolean reviewedDeptPolicies;
-    boolean movedIn;
-    String cubeId;
-    Date currentDate;
+    private String firstName;
+    private String lastName;
+    private String ssn;
+    private Date birthDate;
+    private boolean metWithHr;
+    private boolean metDeptStaff;
+    private boolean reviewedDeptPolicies;
+    private boolean movedIn;
+    private String cubeId;
+    private Date currentDate;
 
     public Employee() {
         currentDate = new Date();
     }
-
+        
     // Assume this must be performed first
     public void meetWithHrForBenefitAndSalryInfo() {
         SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
@@ -78,7 +78,40 @@ public class Employee {
         }
 
     }
+    public String getFirstName() {
+        return firstName;
+    }
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getSsn() {
+        return ssn;
+    }
+
+    public void setSsn(String ssn) {
+        this.ssn = ssn;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+    
+    
+    
     public String getStatus() {
         SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
         String fmtDate = sdf.format(currentDate);
